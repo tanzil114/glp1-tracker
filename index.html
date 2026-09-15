@@ -1,32 +1,259 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GLP-1 Tracker</title><link rel="stylesheet" href="style.css"></head><body>
+<title>GLP-1 Tracker — shot, food and weight log for Ozempic, Mounjaro and compounded</title>
+<meta name="description" content="Track GLP-1 shots, protein, water and weight in one app. Offline food database, barcode scanning and a free estimated level chart. No account.">
+<link rel="canonical" href="https://tanzil114.github.io/glp1-tracker/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0b3d3a">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GLP-1 Tracker">
+<meta property="og:title" content="GLP-1 Tracker — shot, food and weight log for Ozempic, Mounjaro and compounded">
+<meta property="og:description" content="Track GLP-1 shots, protein, water and weight in one app. Offline food database, barcode scanning and a free estimated level chart. No account.">
+<meta property="og:url" content="https://tanzil114.github.io/glp1-tracker/">
+<meta property="og:image" content="https://tanzil114.github.io/glp1-tracker/og/default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GLP-1 Tracker — shot, food and weight log for Ozempic, Mounjaro and compounded">
+<meta name="twitter:description" content="Track GLP-1 shots, protein, water and weight in one app. Offline food database, barcode scanning and a free estimated level chart. No account.">
+<meta name="twitter:image" content="https://tanzil114.github.io/glp1-tracker/og/default.jpg">
+<link rel="icon" href="icon.png" type="image/png">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="alternate" type="application/rss+xml" title="GLP-1 Tracker blog" href="https://tanzil114.github.io/glp1-tracker/feed.xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "GLP-1 Tracker",
+  "operatingSystem": "iOS 15.0",
+  "applicationCategory": "HealthApplication",
+  "applicationSubCategory": "Medication tracker",
+  "url": "https://tanzil114.github.io/glp1-tracker/",
+  "downloadUrl": "https://apps.apple.com/app/id6805192887",
+  "installUrl": "https://apps.apple.com/app/id6805192887",
+  "inLanguage": ["en","de","es","fr","it","pt","nl","sv","da","ja","ko","ar"],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free to download. Unlimited logging of shots, food, weight and symptoms, full offline food search and barcode scanning, and the estimated level chart are free with no account."
+  },
+  "featureList": [
+    "Log injections with dose, date and injection site",
+    "Injection site rotation suggestions",
+    "Estimated medication level chart from published half-lives",
+    "Offline food database with barcode scanning",
+    "Protein-first daily tracking",
+    "Weight with a smoothed trend line",
+    "Side effect logging against dose history",
+    "Vial and compounded dosing in syringe units or milligrams",
+    "Water tracking",
+    "Export and restore your own data"
+  ],
+  "publisher": { "@type": "Organization", "name": "GLP-1 Tracker" }
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "GLP-1 Tracker",
+  "url": "https://tanzil114.github.io/glp1-tracker/",
+  "inLanguage": "en"
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is GLP-1 Tracker free?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Unlimited logging of shots, food, weight, water and symptoms is free, with no account, along with the full offline food database, barcode scanning, injection site rotation, reminders and the estimated level chart. Premium adds history beyond 90 days, insights, custom macro targets and themes." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need an account?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No, and there is never a login wall. Everything is stored in a database on your phone." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which medications does it support?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ozempic, Wegovy, Rybelsus, Mounjaro, Zepbound, Saxenda, Victoza and Trulicity, plus a custom option for compounded or vial medication with dosing in syringe units or milligrams." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work offline?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The food database \u2014 about 98,000 foods \u2014 ships inside the app, and barcode lookups check local data first. You can log everything in airplane mode." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it send my health data anywhere?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Nothing is uploaded and no analytics service receives a health value. The only network request the app makes is a barcode lookup to Open Food Facts, which sends the barcode and nothing else. Its App Store privacy label is Data Not Collected." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get my data out?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Settings \u2192 Export your data produces a full backup file plus a spreadsheet per thing for your doctor, and restore brings your history onto a new phone. The export always contains everything, never just the last 90 days." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it tell me what dose to take?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Never. It does not prescribe, recommend or adjust doses, and it cannot assess symptoms. Titration schedules shown in the app are reproductions of the manufacturers' published labelling, for reference. Your prescriber decides your dose." }
+    }
+  ]
+}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
-<header><img src="icon.png" alt=""><strong>GLP-1 Tracker</strong></header>
-<nav><a href="index.html">Home</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav>
-<h1>The GLP-1 tracker that actually tracks your food.</h1>
-<p class="sub">Log your shots, your protein, your weight and how you feel. Everything stays on your phone.</p>
-<div class="card" style="text-align:center">
-<a class="btn" href="https://apps.apple.com/app/id6805192887">Download on the App Store</a>
-<p style="margin:10px 0 0;color:var(--sub)">Free to download. Unlimited logging, full food search
-and barcode scanning stay free forever. iPhone, iOS 15 and later.</p>
+<header class="site">
+  <a class="brand" href="index.html">
+    <img src="icon.png" width="44" height="44" alt="">
+    <span>GLP-1 Tracker</span>
+  </a>
+  <nav aria-label="Main"><a href="index.html">Home</a><a href="blog/">Blog</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav>
+</header>
+<main id="main">
+
+<section class="hero">
+  <div class="hero-copy">
+    <h1>The GLP-1 tracker that actually tracks your food.</h1>
+    <p class="lede">Log your shots, your protein, your weight and how you feel. Everything stays on
+    your phone — no account, and it works with no signal.</p>
+    <p class="cta">
+      <a class="btn" href="https://apps.apple.com/app/id6805192887">Download on the App Store</a>
+    </p>
+    <p class="fine">Free to download. Unlimited logging, offline food search and barcode scanning
+    are free forever. iPhone, iOS 15 and later. 12 languages.</p>
+  </div>
+  <div class="hero-shot">
+    <img src="img/screen-today.webp" width="320" height="695"
+         alt="The Today screen of GLP-1 Tracker, showing a large protein ring, calorie, carb and fat
+              tiles, a water total with quick-add buttons, and the next shot due."
+         fetchpriority="high" decoding="async">
+  </div>
+</section>
+
+<section class="pillars">
+  <h2>Four things that are unusual about it</h2>
+  <div class="grid">
+    <article>
+      <h3>A real food database</h3>
+      <p>About 98,000 foods from USDA FoodData Central, plus barcode scanning, all of it inside the
+      app. The highest-rated GLP-1 app in the category has no food tracking at all, and several of
+      the ones that do return figures their users say are wrong.</p>
+    </article>
+    <article>
+      <h3>Protein first, not calories</h3>
+      <p>On a GLP-1 you are unlikely to overshoot calories and quite likely to undershoot protein.
+      The protein ring is the largest thing on the home screen; calories are a small tile
+      underneath. <a href="blog/protein-on-a-glp-1/">Why that inversion matters</a>.</p>
+    </article>
+    <article>
+      <h3>Nothing leaves your phone</h3>
+      <p>No account, no server, no analytics receiving a health value. The App Store privacy label
+      is <em>Data Not Collected</em>, and it is literally true. You can still export everything
+      whenever you want.</p>
+    </article>
+    <article>
+      <h3>No AI guessing at your record</h3>
+      <p>Food comes from a database, not a model's best guess. Half-lives come from FDA prescribing
+      information, quoted with the label revision. In a category with a measurable AI backlash, we
+      would rather be checkable.</p>
+    </article>
+  </div>
+</section>
+
+<section class="feature">
+  <img src="img/screen-doses.webp" width="280" height="608" loading="lazy" decoding="async"
+       alt="The Doses screen, showing an estimated medication level curve, a plain count of doses
+            taken, and a shot history.">
+  <div>
+    <h2>Your shots, and what they add up to</h2>
+    <p>Every injection with its dose, date and site, and a suggested site each time based on
+    wherever you have gone longest without using. An estimated level chart drawn from the
+    half-life published in the manufacturer's own labelling — free, where the category leader
+    charges for it.</p>
+    <p>Adherence is shown as a plain count, never a streak and never a score. Missing a dose is
+    often a medical decision, and gamifying that would be wrong.</p>
+    <p><a href="blog/estimated-medication-level-chart/">What the estimated level curve is, and what
+    it is not</a></p>
+  </div>
+</section>
+
+<section class="feature reverse">
+  <img src="img/screen-vial.webp" width="280" height="608" loading="lazy" decoding="async"
+       alt="Logging a dose from a vial, showing the same dose expressed in both milligrams and
+            syringe units.">
+  <div>
+    <h2>Vials and compounded doses, in the units you actually use</h2>
+    <p>Enter a dose in milligrams or in syringe units and see the other as you type, using the
+    concentration on your vial. It is a conversion and nothing more — the app never proposes an
+    amount, never prefills one, and never advances you along a schedule.</p>
+    <p><a href="blog/vial-dosing-units-and-milligrams/">Why the number on your syringe is not
+    milligrams</a></p>
+  </div>
+</section>
+
+<section class="feature">
+  <img src="img/screen-weight.webp" width="280" height="608" loading="lazy" decoding="async"
+       alt="The Weight screen, showing individual weigh-ins and a smoothed trend line.">
+  <div>
+    <h2>Weight, water and how you feel</h2>
+    <p>A smoothed trend line, so one bad morning is not a story. Water with a two-tap quick add —
+    the single most requested feature in this whole category. Side effects logged against your dose
+    history, so a pattern has somewhere to show up.</p>
+    <p>Apple Health can fill the trend from a connected scale, if you want it. It is optional, off
+    until you switch it on, and the app works identically without it.</p>
+  </div>
+</section>
+
+<section class="showreel">
+  <h2>Twenty seconds of the actual app</h2>
+  <p class="lede">Real screens from the shipped build, not a mock-up.</p>
+  <video class="reel" width="1280" height="720" poster="video/hero-poster.webp"
+         autoplay muted loop playsinline preload="none"
+         aria-label="A silent twenty-second tour of GLP-1 Tracker: the food database, the protein
+                     ring on the Today screen, and the estimated medication level chart.">
+    <source src="video/hero.mp4" type="video/mp4">
+  </video>
+</section>
+
+<section class="quiet">
+  <h2>Built on 4,313 reviews, not guesses</h2>
+  <p>Before deciding what to build, we read every App Store review of 27 GLP-1 tracking apps and
+  counted what people actually complain about and ask for. Water tracking, export, and Apple Health
+  all shipped because of that, not because we thought of them.</p>
+  <p><a href="blog/what-4313-glp1-app-reviews-say/">Read what the reviews say &rarr;</a></p>
+</section>
+
+<section class="faq"><h2>Common questions</h2><details><summary>Is GLP-1 Tracker free?</summary><p>Yes. Unlimited logging of shots, food, weight, water and symptoms is free, with no account, along with the full offline food database, barcode scanning, injection site rotation, reminders and the estimated level chart. Premium adds history beyond 90 days, insights, custom macro targets and themes.</p></details><details><summary>Do I need an account?</summary><p>No, and there is never a login wall. Everything is stored in a database on your phone.</p></details><details><summary>Which medications does it support?</summary><p>Ozempic, Wegovy, Rybelsus, Mounjaro, Zepbound, Saxenda, Victoza and Trulicity, plus a custom option for compounded or vial medication with dosing in syringe units or milligrams.</p></details><details><summary>Does it work offline?</summary><p>Yes. The food database — about 98,000 foods — ships inside the app, and barcode lookups check local data first. You can log everything in airplane mode.</p></details><details><summary>Does it send my health data anywhere?</summary><p>No. Nothing is uploaded and no analytics service receives a health value. The only network request the app makes is a barcode lookup to Open Food Facts, which sends the barcode and nothing else. Its App Store privacy label is Data Not Collected.</p></details><details><summary>Can I get my data out?</summary><p>Yes. Settings → Export your data produces a full backup file plus a spreadsheet per thing for your doctor, and restore brings your history onto a new phone. The export always contains everything, never just the last 90 days.</p></details><details><summary>Does it tell me what dose to take?</summary><p>Never. It does not prescribe, recommend or adjust doses, and it cannot assess symptoms. Titration schedules shown in the app are reproductions of the manufacturers&#x27; published labelling, for reference. Your prescriber decides your dose.</p></details></section>
+
+<section class="closing">
+  <h2>Free, and free to leave</h2>
+  <p>Logging is free forever with no account. Your history is yours, exportable in two taps, and
+  stays on your phone until you send it somewhere.</p>
+  <p><a class="btn" href="https://apps.apple.com/app/id6805192887">Download on the App Store</a></p>
+</section>
+
+</main>
+<footer class="site">
+  <p><a class="btn small" href="https://apps.apple.com/app/id6805192887">Get it on the App Store</a></p>
+  <p class="fine"><strong>This is a log, not medical advice.</strong> GLP-1 Tracker is for people
+  already prescribed a GLP-1 medication by a clinician. It does not prescribe, recommend or adjust
+  doses, and it cannot assess symptoms. Your prescriber decides your dose. Talk to them about
+  anything that concerns you.</p>
+  <p class="fine">Nutrition data from USDA FoodData Central. Barcode data from
+  Open Food Facts (ODbL). Ozempic, Wegovy, Rybelsus, Mounjaro, Zepbound, Saxenda, Victoza and
+  Trulicity are trademarks of their respective owners; this app is not affiliated with, endorsed
+  by, or sponsored by any of them.</p>
+  <p class="fine"><a href="index.html">Home</a> · <a href="blog/">Blog</a> ·
+  <a href="support.html">Support</a> · <a href="privacy.html">Privacy</a> ·
+  <a href="https://tanzil114.github.io/glp1-tracker/feed.xml">RSS</a></p>
+</footer>
 </div>
-<div class="card">
-<h2>What it does</h2>
-<ul>
-<li>Every shot: dose, date and injection site, with rotation suggestions</li>
-<li>A real food database with barcode scanning that works offline</li>
-<li>Protein first, because protecting muscle is what matters most on these medications</li>
-<li>Weight with a smoothed trend line, so one bad morning is not a story</li>
-<li>Side effects plotted against your dose history</li>
-<li>Vial and compounded dosing in syringe units or milligrams</li>
-</ul>
-</div>
-<div class="card">
-<h2>Important</h2>
-<p>This app is a log and a companion for people already prescribed GLP-1 medication by a doctor.
-It does not prescribe, recommend or adjust doses, and it cannot assess symptoms. Your prescriber
-decides your dose. Always talk to your doctor about your treatment.</p>
-</div>
-<footer>Nutrition data from USDA FoodData Central. Barcode data from Open Food Facts (ODbL).</footer>
-</div></body></html>
+</body>
+</html>

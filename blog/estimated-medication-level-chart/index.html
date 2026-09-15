@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What an &#x27;estimated level&#x27; chart is, and what it is not — GLP-1 Tracker</title>
+<meta name="description" content="Several GLP-1 apps draw a curve of medication in your system. The arithmetic behind it, why it is an estimate, and where it stops meaning much.">
+<link rel="canonical" href="https://tanzil114.github.io/glp1-tracker/blog/estimated-medication-level-chart/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0b3d3a">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GLP-1 Tracker">
+<meta property="og:title" content="What an &#x27;estimated level&#x27; chart is, and what it is not — GLP-1 Tracker">
+<meta property="og:description" content="Several GLP-1 apps draw a curve of medication in your system. The arithmetic behind it, why it is an estimate, and where it stops meaning much.">
+<meta property="og:url" content="https://tanzil114.github.io/glp1-tracker/blog/estimated-medication-level-chart/">
+<meta property="og:image" content="https://tanzil114.github.io/glp1-tracker/img/blog-level.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What an &#x27;estimated level&#x27; chart is, and what it is not — GLP-1 Tracker">
+<meta name="twitter:description" content="Several GLP-1 apps draw a curve of medication in your system. The arithmetic behind it, why it is an estimate, and where it stops meaning much.">
+<meta name="twitter:image" content="https://tanzil114.github.io/glp1-tracker/img/blog-level.jpg">
+<link rel="icon" href="../../icon.png" type="image/png">
+<link rel="apple-touch-icon" href="../../icon.png">
+<link rel="alternate" type="application/rss+xml" title="GLP-1 Tracker blog" href="https://tanzil114.github.io/glp1-tracker/feed.xml">
+<link rel="stylesheet" href="../../style.css">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "What an 'estimated level' chart is, and what it is not \u2014 GLP-1 Tracker",
+  "description": "Several GLP-1 apps draw a curve of medication in your system. The arithmetic behind it, why it is an estimate, and where it stops meaning much.",
+  "image": "https://tanzil114.github.io/glp1-tracker/img/blog-level.jpg",
+  "datePublished": "2026-09-16",
+  "dateModified": "2026-09-16",
+  "author": { "@type": "Organization", "name": "GLP-1 Tracker", "url": "https://tanzil114.github.io/glp1-tracker/" },
+  "publisher": { "@type": "Organization", "name": "GLP-1 Tracker", "url": "https://tanzil114.github.io/glp1-tracker/" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://tanzil114.github.io/glp1-tracker/blog/estimated-medication-level-chart/" },
+  "isAccessibleForFree": true,
+  "inLanguage": "en"
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is an estimated medication level chart a blood level?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Nothing in a phone measures anything in your body. The curve is arithmetic applied to the doses and dates you logged, using the half-life published in the medication's prescribing information. It is an estimate, individual results vary, and it is not a medical measurement." }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the estimated level calculated?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Each dose decays by half every half-life, so its remaining contribution is dose \u00d7 2^(\u2212time since dose \u00f7 half-life), and the curve is the sum across every dose logged. It is a single-compartment decay model and ignores absorption time and individual variation." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the chart work for compounded semaglutide?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Only as a rough illustration. Compounded products have no published half-life because they are not published products, so any app drawing a confident curve for one is using a number it does not have. GLP-1 Tracker says so in the footnote rather than implying a source it does not have." }
+    }
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tanzil114.github.io/glp1-tracker/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tanzil114.github.io/glp1-tracker/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "What an 'estimated level' chart is, and what it is not", "item": "https://tanzil114.github.io/glp1-tracker/blog/estimated-medication-level-chart/" }
+  ]
+}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<header class="site">
+  <a class="brand" href="../../index.html">
+    <img src="../../icon.png" width="44" height="44" alt="">
+    <span>GLP-1 Tracker</span>
+  </a>
+  <nav aria-label="Main"><a href="../../index.html">Home</a><a href="../../blog/" aria-current="page">Blog</a><a href="../../support.html">Support</a><a href="../../privacy.html">Privacy</a></nav>
+</header>
+<main id="main">
+
+<article class="post">
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="../../index.html">Home</a> <span aria-hidden="true">/</span>
+    <a href="../">Blog</a>
+  </nav>
+  <h1>What an &#x27;estimated level&#x27; chart is, and what it is not</h1>
+  <p class="byline"><time datetime="2026-09-16">16 September 2026</time> · GLP-1 Tracker</p>
+  <img class="post-hero" src="../../img/blog-level.jpg" width="1200" height="630" loading="lazy"
+       decoding="async" alt="">
+  
+<p class="lede">It is the feature people in this category like most, and the one most likely to be
+misread. A curve showing medication "in your system" looks like a measurement. It is not one. It is
+arithmetic on the dates you typed in.</p>
+
+<h2>The arithmetic</h2>
+
+<p>Every one of these curves is built from one idea: a drug leaves the body at a rate proportional
+to how much is left, so the amount remaining halves over a fixed period. That period is the
+<strong>half-life</strong>, and for the branded GLP-1 medications it is published in the FDA
+prescribing information — section 12.3, the same document your pharmacist works from. Semaglutide's
+is about a week, which is why those products are weekly.</p>
+
+<p>From that, the contribution of a single dose at any later moment is:</p>
+
+<p class="formula">remaining = dose × 2<sup>−(time since dose ÷ half-life)</sup></p>
+
+<p>and the curve is the sum of that across every dose you have logged. That is the whole model. It
+is a single-compartment decay, the simplest pharmacokinetic model there is.</p>
+
+<h2>What it is genuinely good for</h2>
+
+<ul>
+<li><strong>Seeing the accumulation.</strong> If you dose weekly and the half-life is about a week,
+you are injecting before the previous dose has cleared. The curve makes the ramp-up over the first
+several weeks visible, which surprises people.</li>
+<li><strong>Making sense of the shape of a week.</strong> Plenty of people notice that days two and
+six feel different. A decay curve is a reasonable thing to hold that observation against.</li>
+<li><strong>Seeing what a missed or late shot did.</strong> The dip is obvious.</li>
+</ul>
+
+<h2>What it is not</h2>
+
+<p>It is not a blood level. Nothing in your phone is measuring anything. We label ours "Estimated
+level" everywhere, never "blood level", and we put a footnote under every chart saying it is a
+simplified estimate based on published half-life, that individual results vary, and that it is not
+a medical measurement. That is not legal throat-clearing; a curve drawn confidently invites
+decisions it cannot support.</p>
+
+<p>Specifically, the model ignores absorption — it treats a dose as arriving instantly, when in
+reality it enters over hours — as well as individual variation in clearance, body weight, kidney
+function, and everything else a real pharmacokinetic model accounts for. The published half-life is
+a population figure, not yours.</p>
+
+<p>And the thing it must never be used for: <strong>deciding what to inject or when.</strong> A
+curve is not a reason to move a dose. That decision belongs to your prescriber, every time.</p>
+
+<h2>Where it stops being meaningful at all</h2>
+
+<p>Compounded semaglutide and tirzepatide have no published half-life, because the compound is not
+a published product. Any app drawing a confident curve for a compounded vial is applying a number
+it does not have. Ours draws the curve — people find the shape useful — but says plainly in the
+footnote that this medication has no published half-life and the curve is a rough illustration
+only. An estimate presented as if it were sourced is worse than no estimate.</p>
+
+<h2>Why ours is free</h2>
+
+<p>The clearest single finding from reading 4,313 reviews in this category was how often people
+complain about paying for the feature they came for. From the highest-rated app in the category,
+more than once:</p>
+
+<blockquote>
+<p>"The free version doesn't contain the most useful thing about the app, which is the estimated
+medication levels."</p>
+</blockquote>
+
+<p>Ours is in the free tier, along with unlimited logging, the full offline food database and
+barcode scanning, injection site rotation and reminders. No account.</p>
+
+<p><a class="btn" href="https://apps.apple.com/app/id6805192887">Get GLP-1 Tracker on the App
+Store</a></p>
+
+  <section class="faq"><h2>Common questions</h2><details><summary>Is an estimated medication level chart a blood level?</summary><p>No. Nothing in a phone measures anything in your body. The curve is arithmetic applied to the doses and dates you logged, using the half-life published in the medication&#x27;s prescribing information. It is an estimate, individual results vary, and it is not a medical measurement.</p></details><details><summary>How is the estimated level calculated?</summary><p>Each dose decays by half every half-life, so its remaining contribution is dose × 2^(−time since dose ÷ half-life), and the curve is the sum across every dose logged. It is a single-compartment decay model and ignores absorption time and individual variation.</p></details><details><summary>Does the chart work for compounded semaglutide?</summary><p>Only as a rough illustration. Compounded products have no published half-life because they are not published products, so any app drawing a confident curve for one is using a number it does not have. GLP-1 Tracker says so in the footnote rather than implying a source it does not have.</p></details></section>
+  <aside class="note">
+    <p><strong>A log, not medical advice.</strong> GLP-1 Tracker is for people already prescribed a
+    GLP-1 medication. Nothing on this page prescribes, recommends or adjusts a dose, and nothing
+    here can assess a symptom. Talk to your prescriber or pharmacist.</p>
+  </aside>
+</article>
+
+</main>
+<footer class="site">
+  <p><a class="btn small" href="https://apps.apple.com/app/id6805192887">Get it on the App Store</a></p>
+  <p class="fine"><strong>This is a log, not medical advice.</strong> GLP-1 Tracker is for people
+  already prescribed a GLP-1 medication by a clinician. It does not prescribe, recommend or adjust
+  doses, and it cannot assess symptoms. Your prescriber decides your dose. Talk to them about
+  anything that concerns you.</p>
+  <p class="fine">Nutrition data from USDA FoodData Central. Barcode data from
+  Open Food Facts (ODbL). Ozempic, Wegovy, Rybelsus, Mounjaro, Zepbound, Saxenda, Victoza and
+  Trulicity are trademarks of their respective owners; this app is not affiliated with, endorsed
+  by, or sponsored by any of them.</p>
+  <p class="fine"><a href="../../index.html">Home</a> · <a href="../../blog/">Blog</a> ·
+  <a href="../../support.html">Support</a> · <a href="../../privacy.html">Privacy</a> ·
+  <a href="https://tanzil114.github.io/glp1-tracker/feed.xml">RSS</a></p>
+</footer>
+</div>
+</body>
+</html>

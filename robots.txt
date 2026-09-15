@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /_src/
+
+Sitemap: https://tanzil114.github.io/glp1-tracker/sitemap.xml

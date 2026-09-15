@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>GLP-1 Tracker</title>
+  <link>https://tanzil114.github.io/glp1-tracker/</link>
+  <atom:link href="https://tanzil114.github.io/glp1-tracker/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>Practical writing about tracking a GLP-1 course, from the people who build the app.</description>
+  <language>en</language>
+  <item>
+    <title>What 4,313 GLP-1 app reviews actually say people need</title>
+    <link>https://tanzil114.github.io/glp1-tracker/blog/what-4313-glp1-app-reviews-say/</link>
+    <guid isPermaLink="true">https://tanzil114.github.io/glp1-tracker/blog/what-4313-glp1-app-reviews-say/</guid>
+    <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+    <description>We read every App Store review of 27 GLP-1 tracking apps. Here is what people praise, what makes them angry, and the four things they ask for most.</description>
+  </item>
+  <item>
+    <title>Protein on a GLP-1: why it is the number to watch</title>
+    <link>https://tanzil114.github.io/glp1-tracker/blog/protein-on-a-glp-1/</link>
+    <guid isPermaLink="true">https://tanzil114.github.io/glp1-tracker/blog/protein-on-a-glp-1/</guid>
+    <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+    <description>Appetite falls fast on a GLP-1. Why protein is the number most people are told to protect, and how to track it without counting every meal.</description>
+  </item>
+  <item>
+    <title>Injection site rotation: a system you will actually keep to</title>
+    <link>https://tanzil114.github.io/glp1-tracker/blog/injection-site-rotation/</link>
+    <guid isPermaLink="true">https://tanzil114.github.io/glp1-tracker/blog/injection-site-rotation/</guid>
+    <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+    <description>Rotating injection sites is standard guidance for subcutaneous injections. The hard part is remembering where you went last time. Here is a simple way to do it.</description>
+  </item>
+  <item>
+    <title>Vials and syringe units: why the number on your syringe is not milligrams</title>
+    <link>https://tanzil114.github.io/glp1-tracker/blog/vial-dosing-units-and-milligrams/</link>
+    <guid isPermaLink="true">https://tanzil114.github.io/glp1-tracker/blog/vial-dosing-units-and-milligrams/</guid>
+    <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+    <description>A pen tells you milligrams; a vial tells you units. What each means, and why your vial&#x27;s concentration is the number that connects them.</description>
+  </item>
+  <item>
+    <title>Getting your GLP-1 history onto a new phone</title>
+    <link>https://tanzil114.github.io/glp1-tracker/blog/keep-your-glp1-data-when-you-change-phones/</link>
+    <guid isPermaLink="true">https://tanzil114.github.io/glp1-tracker/blog/keep-your-glp1-data-when-you-change-phones/</guid>
+    <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+    <description>Losing a year of injection history to a new phone is a common complaint. How to avoid it, and what to ask before trusting an app with your log.</description>
+  </item>
+  <item>
+    <title>What an &#x27;estimated level&#x27; chart is, and what it is not</title>
+    <link>https://tanzil114.github.io/glp1-tracker/blog/estimated-medication-level-chart/</link>
+    <guid isPermaLink="true">https://tanzil114.github.io/glp1-tracker/blog/estimated-medication-level-chart/</guid>
+    <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+    <description>Several GLP-1 apps draw a curve of medication in your system. The arithmetic behind it, why it is an estimate, and where it stops meaning much.</description>
+  </item>
+</channel>
+</rss>
